@@ -1,0 +1,157 @@
+[
+  {
+    "name": "type: bug",
+    "color": "D73A4A",
+    "description": "Bug report"
+  },
+  {
+    "name": "type: compatibility",
+    "color": "0E8A16",
+    "description": "PS Vita, firmware, or emulator test"
+  },
+  {
+    "name": "type: help",
+    "color": "0075CA",
+    "description": "Support question"
+  },
+  {
+    "name": "type: feature",
+    "color": "A2EEEF",
+    "description": "Feature or UX idea"
+  },
+  {
+    "name": "status: needs triage",
+    "color": "FBCA04",
+    "description": "Needs first review"
+  },
+  {
+    "name": "status: needs information",
+    "color": "D4C5F9",
+    "description": "Waiting for more details"
+  },
+  {
+    "name": "status: investigating",
+    "color": "BFDADC",
+    "description": "Under investigation"
+  },
+  {
+    "name": "status: confirmed",
+    "color": "B60205",
+    "description": "Reproduced or confirmed"
+  },
+  {
+    "name": "status: fixed",
+    "color": "0E8A16",
+    "description": "Fixed"
+  },
+  {
+    "name": "status: cannot reproduce",
+    "color": "EDEDED",
+    "description": "Could not reproduce"
+  },
+  {
+    "name": "area: startup",
+    "color": "F9D0C4",
+    "description": "Install, launch, scan, or cache"
+  },
+  {
+    "name": "area: library",
+    "color": "C5DEF5",
+    "description": "Library, sorting, or search"
+  },
+  {
+    "name": "area: playback",
+    "color": "5319E7",
+    "description": "Playback, decoding, output, or transport"
+  },
+  {
+    "name": "area: artwork",
+    "color": "F7C6C7",
+    "description": "Album artwork"
+  },
+  {
+    "name": "area: queue",
+    "color": "C2E0C6",
+    "description": "Queue, playlists, or favorites"
+  },
+  {
+    "name": "area: interface",
+    "color": "BFD4F2",
+    "description": "Controls, navigation, or visuals"
+  },
+  {
+    "name": "area: performance",
+    "color": "FEF2C0",
+    "description": "Speed or responsiveness"
+  },
+  {
+    "name": "area: shutdown",
+    "color": "D4C5F9",
+    "description": "Closing PSVITAMAN or returning to LiveArea"
+  },
+  {
+    "name": "area: other",
+    "color": "EDEDED",
+    "description": "Other or unknown area"
+  },
+  {
+    "name": "model: emulator",
+    "color": "E99695",
+    "description": "Vita3K or another emulator"
+  },
+  {
+    "name": "model: unknown",
+    "color": "EDEDED",
+    "description": "Model not identified"
+  },
+  {
+    "name": "log: attached",
+    "color": "0E8A16",
+    "description": "Diagnostic log attached"
+  },
+  {
+    "name": "log: missing",
+    "color": "FBCA04",
+    "description": "No diagnostic log attached"
+  },
+  {
+    "name": "log: unavailable",
+    "color": "D4C5F9",
+    "description": "Log unavailable"
+  },
+  {
+    "name": "log: private",
+    "color": "C5DEF5",
+    "description": "Reporter kept the log private"
+  },
+  {
+    "name": "log: not applicable",
+    "color": "EDEDED",
+    "description": "Log not relevant"
+  },
+  {
+    "name": "language: japanese",
+    "color": "F9D0C4",
+    "description": "Japanese report"
+  },
+  {
+    "name": "status: reviewed",
+    "color": "6E7781",
+    "description": "Initial review completed"
+  },
+  {
+    "name": "model: PCH-1000",
+    "color": "1b90df",
+    "description": "PS Vita OLED"
+  },
+  {
+    "name": "model: PCH-2000",
+    "color": "1b90df",
+    "description": "PS Vita Slim"
+  },
+  {
+    "name": "model: PS TV",
+    "color": "1b90df",
+    "description": "PS TV / Vita TV"
+  }
+]

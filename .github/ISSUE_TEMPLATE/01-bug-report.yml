@@ -1,0 +1,233 @@
+name: Report a PSVITAMAN bug
+description: Crash, freeze, playback, artwork, controls, or anything else that broke.
+title: '[Bug] '
+labels:
+- 'type: bug'
+- 'status: needs triage'
+body:
+- type: markdown
+  attributes:
+    value: 'Thanks for testing PSVITAMAN.
+
+
+      Fill in what you know. If you do not know a model, firmware, or version detail, write **“I don''t know.”**
+
+
+      Issues and attachments are public. Do not upload music files. PSVITAMAN does not send diagnostic data anywhere
+      by itself.
+
+      '
+- type: dropdown
+  id: vita-model
+  attributes:
+    label: PS Vita model
+    description: The model family is enough.
+    options:
+    - PS Vita PCH-1000 (OLED)
+    - PS Vita PCH-2000 (Slim)
+    - PS TV / Vita TV
+    - Vita3K
+    - Not sure
+  validations:
+    required: true
+- type: input
+  id: exact-model
+  attributes:
+    label: Exact model number
+    description: Optional. Printed on the PS Vita, for example PCH-2001 or PCH-1004.
+    placeholder: PCH-2001, or I don't know
+  validations:
+    required: false
+- type: input
+  id: firmware
+  attributes:
+    label: System software or custom firmware
+    description: Include both if you know them.
+    placeholder: System version and homebrew setup, or I don't know
+  validations:
+    required: true
+- type: input
+  id: psvitaman-version
+  attributes:
+    label: PSVITAMAN version
+    description: The release or build you installed. If unknown, write I don't know.
+    placeholder: Public Alpha version or build
+  validations:
+    required: true
+- type: dropdown
+  id: problem-area
+  attributes:
+    label: Where did the problem happen?
+    options:
+    - Installation or launching from the LiveArea
+    - Startup, library scan, or cache
+    - Library browsing, sorting, or search
+    - Starting playback or no sound
+    - Playback interruption, noise, or incorrect audio
+    - Pause, resume, seek, previous, or next
+    - Queue, playlists, or favorites
+    - Album artwork or cover loading
+    - Cassette view or another visual
+    - Controls or interface navigation
+    - Performance, slowdown, or delayed response
+    - Closing PSVITAMAN or returning to the LiveArea
+    - Somewhere else
+    - Not sure
+  validations:
+    required: true
+- type: textarea
+  id: what-happened
+  attributes:
+    label: What happened?
+    description: What did you see or hear?
+    placeholder: PSVITAMAN opened normally. I selected a song, the cover appeared, and then...
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: What did you expect?
+    description: Optional.
+    placeholder: I expected the next song to begin.
+  validations:
+    required: false
+- type: textarea
+  id: steps
+  attributes:
+    label: Steps to reproduce
+    description: What did you do right before it happened? If it only happened once, list what you remember.
+    placeholder: '1. Opened PSVITAMAN
+
+      2. Opened All Songs
+
+      3. Selected ...
+
+      4. Pressed ...
+
+      '
+  validations:
+    required: true
+- type: dropdown
+  id: frequency
+  attributes:
+    label: How often does it happen?
+    options:
+    - Every time
+    - Most of the time
+    - Sometimes
+    - It happened once
+    - I could not reproduce it
+    - Not sure
+  validations:
+    required: true
+- type: dropdown
+  id: playback-result
+  attributes:
+    label: What happened to the song?
+    description: Use “Not applicable” if the bug was not about playback.
+    options:
+    - It played normally
+    - It did not start
+    - It started and then stopped
+    - It continued playing but something else broke
+    - It played with noise, gaps, or incorrect sound
+    - There was no sound
+    - Not applicable
+    - Not sure
+  validations:
+    required: true
+- type: dropdown
+  id: cover-result
+  attributes:
+    label: What happened to the cover?
+    description: Use “Not applicable” if artwork was not involved.
+    options:
+    - It appeared normally
+    - It did not appear
+    - It appeared late
+    - It was incorrect or corrupted
+    - Not applicable
+    - Not sure
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: '### Diagnostic log
+
+
+      Copy `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.log` before launching PSVITAMAN again. A clean START shutdown
+      also exports `ux0:/PSVITAMAN-HW-DIAG.log`; after a crash, that root copy may be stale. The previous session
+      is rotated to `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.previous.log` on the next launch.
+
+
+      Check the log before uploading it. Issues are public; logs can contain song names, file names, and paths.
+
+      '
+- type: dropdown
+  id: log-status
+  attributes:
+    label: Diagnostic log status
+    options:
+    - I attached PSVITAMAN-HW-DIAG.log below
+    - I found it but prefer not to publish it
+    - I could not find it
+    - PSVITAMAN did not create it
+    - It was replaced by another launch
+    - It is not relevant to this report
+    - Not sure
+  validations:
+    required: true
+- type: upload
+  id: diagnostic-log
+  attributes:
+    label: Attach PSVITAMAN-HW-DIAG.log
+    description: If you have it, attach the .log here. Do not upload music or the whole Vita storage.
+  validations:
+    required: false
+    accept: .log,.txt
+- type: textarea
+  id: affected-file
+  attributes:
+    label: Affected song or cover details
+    description: Optional. Do not upload the song itself.
+    placeholder: 'Artist and song:
+
+      FLAC file size:
+
+      Sample rate / bit depth / channels:
+
+      Cover format:
+
+      Cover dimensions:
+
+      Embedded cover file size:
+
+      '
+  validations:
+    required: false
+- type: upload
+  id: media
+  attributes:
+    label: Photo, screenshot, or short video
+    description: Optional. A phone photo of the PS Vita screen is fine.
+  validations:
+    required: false
+    accept: .png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm
+- type: textarea
+  id: additional-context
+  attributes:
+    label: Anything else
+    description: Anything else that might matter.
+  validations:
+    required: false
+- type: checkboxes
+  id: public-confirmation
+  attributes:
+    label: Before submitting
+    options:
+    - label: I understand that this issue and its attachments are public.
+      required: true
+    - label: I checked anything I attached for information I do not want public.
+      required: true
+    - label: I did not upload copyrighted music.
+      required: true

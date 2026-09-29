@@ -1,0 +1,232 @@
+name: PSVITAMAN の不具合を報告する
+description: クラッシュ、フリーズ、再生、ジャケット画像、操作などの不具合報告。
+title: '[不具合] '
+labels:
+- 'type: bug'
+- 'status: needs triage'
+- 'language: japanese'
+body:
+- type: markdown
+  attributes:
+    value: 'PSVITAMAN のテストありがとうございます。
+
+
+      分かる範囲で大丈夫です。型番、CFW、バージョンなどが分からなければ **「分かりません」** と入力してください。
+
+
+      Issue と添付ファイルは公開されます。音楽ファイルはアップロードしないでください。診断ログが自動送信されることはありません。
+
+      '
+- type: dropdown
+  id: vita-model
+  attributes:
+    label: PS Vita のモデル
+    description: シリーズ名だけでも大丈夫です。
+    options:
+    - PS Vita PCH-1000 (OLED)
+    - PS Vita PCH-2000 (Slim)
+    - PS TV / Vita TV
+    - Vita3K
+    - 分かりません
+  validations:
+    required: true
+- type: input
+  id: exact-model
+  attributes:
+    label: 正確な型番
+    description: 任意。PCH-2001、PCH-1004 など、本体に記載されている型番です。
+    placeholder: PCH-2001、または分かりません
+  validations:
+    required: false
+- type: input
+  id: firmware
+  attributes:
+    label: システムソフトウェア / カスタムファームウェア
+    description: 分かれば両方を入力してください。
+    placeholder: システムバージョンと改造環境、または分かりません
+  validations:
+    required: true
+- type: input
+  id: psvitaman-version
+  attributes:
+    label: PSVITAMAN のバージョン
+    description: インストールしたリリース / ビルドのバージョン。分からなければ「分かりません」。
+    placeholder: Public Alpha のバージョン
+  validations:
+    required: true
+- type: dropdown
+  id: problem-area
+  attributes:
+    label: どこで問題が発生しましたか？
+    options:
+    - インストール / LiveArea からの起動
+    - 起動 / ライブラリのスキャン / キャッシュ
+    - ライブラリの閲覧 / 並べ替え / 検索
+    - 再生開始 / 音が出ない
+    - 再生の中断 / ノイズ / 音声の異常
+    - 一時停止 / 再開 / シーク / 前へ / 次へ
+    - キュー / プレイリスト / お気に入り
+    - ジャケット画像 / カバーの読み込み
+    - カセット表示 / その他のビジュアル
+    - 操作 / 画面のナビゲーション
+    - 動作が遅い / 反応が遅れる
+    - PSVITAMAN の終了 / LiveArea へ戻る
+    - その他
+    - 分かりません
+  validations:
+    required: true
+- type: textarea
+  id: what-happened
+  attributes:
+    label: 何が起きましたか？
+    description: 画面や音がどうなったか教えてください。
+    placeholder: PSVITAMAN は正常に起動しました。曲を選ぶとジャケットが表示され、その後...
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: 本来どうなると予想していましたか？
+    description: 任意。
+    placeholder: 次の曲が再生されると思っていました。
+  validations:
+    required: false
+- type: textarea
+  id: steps
+  attributes:
+    label: 問題が起きるまでの手順
+    description: 直前に何をしたか、覚えている範囲で書いてください。一度しか起きていなくても大丈夫です。
+    placeholder: '1. PSVITAMAN を起動
+
+      2. All Songs を開く
+
+      3. ... を選択
+
+      4. ... ボタンを押す
+
+      '
+  validations:
+    required: true
+- type: dropdown
+  id: frequency
+  attributes:
+    label: どのくらいの頻度で発生しますか？
+    options:
+    - 毎回
+    - ほとんど毎回
+    - ときどき
+    - 1 回だけ
+    - 再現できませんでした
+    - 分かりません
+  validations:
+    required: true
+- type: dropdown
+  id: playback-result
+  attributes:
+    label: 曲の再生はどうなりましたか？
+    description: 再生と関係がない場合は「該当しません」を選んでください。
+    options:
+    - 正常に再生された
+    - 再生が始まらなかった
+    - 再生が始まった後に停止した
+    - 再生は続いたが、別の問題が起きた
+    - ノイズ、音切れ、または音声の異常があった
+    - 音が出なかった
+    - 該当しません
+    - 分かりません
+  validations:
+    required: true
+- type: dropdown
+  id: cover-result
+  attributes:
+    label: ジャケット画像はどうなりましたか？
+    description: 画像と関係がない場合は「該当しません」を選んでください。
+    options:
+    - 正常に表示された
+    - 表示されなかった
+    - 表示が遅かった
+    - 間違った画像、または壊れた表示になった
+    - 該当しません
+    - 分かりません
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: '### 診断ログ
+
+
+      再起動する前に `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.log` をコピーしてください。START で正常終了すると `ux0:/PSVITAMAN-HW-DIAG.log`
+      にも保存されます。クラッシュ後はルート側のコピーが古い場合があります。次回起動時、前回のログは `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.previous.log` に移動されます。
+
+
+      Issue は公開されます。曲名、ファイル名、パスなどをアップロード前に確認してください。
+
+      '
+- type: dropdown
+  id: log-status
+  attributes:
+    label: 診断ログの状態
+    options:
+    - 下に PSVITAMAN-HW-DIAG.log を添付しました
+    - 見つけましたが公開したくありません
+    - 見つけられませんでした
+    - PSVITAMAN がログを作成しませんでした
+    - もう一度起動したため上書きされました
+    - この問題には関係ありません
+    - 分かりません
+  validations:
+    required: true
+- type: upload
+  id: diagnostic-log
+  attributes:
+    label: PSVITAMAN-HW-DIAG.log を添付
+    description: ログがあればここに添付してください。音楽ファイルやVita のストレージ全体はアップロードしないでください。
+  validations:
+    required: false
+    accept: .log,.txt
+- type: textarea
+  id: affected-file
+  attributes:
+    label: 問題が起きた曲 / ジャケット画像の情報
+    description: 任意。音楽ファイル自体はアップロードしないでください。
+    placeholder: 'アーティスト名 / 曲名:
+
+      FLAC ファイルのサイズ:
+
+      サンプルレート / ビット深度 / チャンネル数:
+
+      画像形式:
+
+      画像のピクセル寸法:
+
+      埋め込み画像のファイルサイズ:
+
+      '
+  validations:
+    required: false
+- type: upload
+  id: media
+  attributes:
+    label: 写真、スクリーンショット、短い動画
+    description: 任意。PS Vita の画面をスマートフォンで撮った写真でも大丈夫です。
+  validations:
+    required: false
+    accept: .png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm
+- type: textarea
+  id: additional-context
+  attributes:
+    label: その他の情報
+    description: ほかに気になることがあれば書いてください。
+  validations:
+    required: false
+- type: checkboxes
+  id: public-confirmation
+  attributes:
+    label: 送信前の確認
+    options:
+    - label: この Issue と添付ファイルが公開されることを理解しています。
+      required: true
+    - label: 添付ファイルに公開したくない情報がないか確認しました。
+      required: true
+    - label: 著作権で保護された音楽ファイルをアップロードしていません。
+      required: true

@@ -1,0 +1,80 @@
+name: PSVITAMAN issue triage
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/labels.json"
+      - ".github/workflows/triage.yml"
+      - "scripts/sync-labels.js"
+      - "scripts/triage.js"
+  workflow_dispatch:
+  issues:
+    types:
+      - opened
+      - edited
+      - reopened
+  issue_comment:
+    types:
+      - created
+      - edited
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync-labels:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create or update tracker labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const syncLabels = require("./scripts/sync-labels.js");
+            await syncLabels({ github, context });
+
+  triage-issue:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure tracker labels exist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const syncLabels = require("./scripts/sync-labels.js");
+            await syncLabels({ github, context });
+
+      - name: Classify and acknowledge the report
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { triageIssue } = require("./scripts/triage.js");
+            await triageIssue({ github, context });
+
+  detect-later-log:
+    if: github.event_name == 'issue_comment'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure tracker labels exist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const syncLabels = require("./scripts/sync-labels.js");
+            await syncLabels({ github, context });
+
+      - name: Detect a diagnostic log added in a comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { detectLaterLog } = require("./scripts/triage.js");
+            await detectLaterLog({ github, context });
+

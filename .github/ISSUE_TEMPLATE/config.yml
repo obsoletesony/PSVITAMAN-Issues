@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bug-report guide
+    url: https://www.obsoletesony.com/psvitaman/report-a-bug
+    about: Find the diagnostic log and see what to include.
+  - name: PSVITAMAN User's Guide
+    url: https://www.obsoletesony.com/downloads/PSVITAMAN-User-Guide.pdf
+    about: Installation, controls, supported files, and troubleshooting.
+  - name: Security or privacy issue
+    url: https://github.com/obsoletesony/PSVITAMAN-Issues/security/policy
+    about: Read the private reporting instructions before sharing sensitive details.
+
