@@ -6,20 +6,15 @@ Bug reports, compatibility tests, help, and feature ideas for **PSVITAMAN**.
 
 PSVITAMAN's source is private for now. Use this repo for public reports and testing feedback.
 
-## Report something
+## Report an issue
 
-| What do you need? | Form |
-| --- | --- |
-| PSVITAMAN crashed, froze, misbehaved, or would not play something | [Report a PSVITAMAN bug](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=01-bug-report.yml) |
-| 日本語で不具合を報告したい | [日本語の不具合報告フォーム](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=02-bug-report-ja.yml) |
-| You tested a PS Vita model or firmware and want to share the result | [Share a compatibility result](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=03-compatibility-report.yml) |
-| You are stuck or not sure whether something is a bug | [Ask for help](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=04-help-request.yml) |
-| You have an idea for PSVITAMAN | [Suggest an improvement](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=05-feature-request.yml) |
-| You need to report a security or privacy concern privately | [Read the security policy](https://github.com/obsoletesony/PSVITAMAN-Issues/security/policy) |
+[Open the report form / 報告フォームを開く](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=01-bug-report.yml)
 
-Don't know your exact PS Vita model, firmware, or PSVITAMAN version? Use **Not sure** or write **“I don't know.”**
+One form for all reports. English and Japanese are welcome. Tell us your setup, what happened, and how to reproduce it. Attach the diagnostic log or a screenshot if available. Missing details? Send what you have.
 
-A free GitHub account is required to submit an issue.
+報告はこのフォームにまとめています。日本語で記入できます。使用環境、問題の内容、再現手順を教えてください。ログや画像は任意です。
+
+A free GitHub account is required. [View existing reports](https://github.com/obsoletesony/PSVITAMAN-Issues/issues).
 
 ## Diagnostic log
 
@@ -47,4 +42,5 @@ Public reports remain in this tracker. Confirmed engineering work may also be tr
 - [Open reports](https://github.com/obsoletesony/PSVITAMAN-Issues/issues)
 
 PSVITAMAN is an independent ObsoleteSony project and is not affiliated with or endorsed by Sony.
+
 

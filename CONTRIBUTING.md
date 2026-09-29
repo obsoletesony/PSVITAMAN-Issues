@@ -4,7 +4,7 @@ Reports should concern real PS Vita or PS TV hardware. Emulator issues are outsi
 
 This repo is for PSVITAMAN bugs, compatibility tests, help, and feature ideas. The application source is kept separately and is private for now.
 
-Use the [issue forms](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new/choose). If you do not know a technical detail, write **“I don't know.”**
+Use the [report form](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new?template=01-bug-report.yml). If you do not know a technical detail, write **“I don't know.”**
 
 ## A useful bug report
 
@@ -30,7 +30,8 @@ Do not upload copyrighted music, a full Vita storage dump, passwords, account in
 
 ## Language
 
-English and Japanese are both fine. For another language, use the English form and write the report in the language you prefer.
+Use the same report form for English or Japanese. Other languages are welcome too.
 
 This project is not accepting code contributions. Reports and testing feedback are welcome. Feature ideas do not change the fixed roadmap or promise implementation.
+
 

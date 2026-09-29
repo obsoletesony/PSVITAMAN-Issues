@@ -28,8 +28,8 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
-if len(FORM_FILES) != 5:
-    fail(f"expected 5 numbered issue forms, found {len(FORM_FILES)}")
+if len(FORM_FILES) != 1:
+    fail(f"expected 1 numbered issue form, found {len(FORM_FILES)}")
 
 label_defs = json.loads((ROOT / ".github" / "labels.json").read_text(encoding="utf-8"))
 known_labels = {item["name"] for item in label_defs}
@@ -142,4 +142,5 @@ for required_path in (
         fail(f"missing {required_path}")
 
 print(f"Validated {len(FORM_FILES)} PSVITAMAN issue forms and supporting files.")
+
 
