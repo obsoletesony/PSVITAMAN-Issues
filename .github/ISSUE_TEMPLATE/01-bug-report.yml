@@ -13,10 +13,26 @@ body:
       問題の内容を英語または日本語で教えてください。分からない項目は「分かりません」で大丈夫です。
 
 
-      Reports and attachments are public. Do not upload music or private information. / 報告と添付ファイルは公開されます。音楽や個人情報は添付しないでください。
+      Reports and attachments are public. Do not upload music, passwords, Jellyfin access tokens, Quick Connect secrets, or private information. / 報告と添付ファイルは公開されます。音楽、パスワード、Jellyfin のアクセストークン、Quick Connect の秘密情報、個人情報は添付しないでください。
 
 
       Real PS Vita / PS TV hardware only. / PS Vita・PS TV 実機での報告専用です。'
+- type: dropdown
+  id: area
+  attributes:
+    label: Where did the problem occur?
+    description: Choose the closest match. / 問題が発生した場所を選んでください。
+    options:
+    - Local playback or library
+    - Jellyfin connection / Quick Connect
+    - Jellyfin library browsing
+    - Jellyfin playback
+    - Jellyfin artwork
+    - Settings / controls / interface
+    - Startup / shutdown / suspend
+    - Other
+  validations:
+    required: true
 - type: dropdown
   id: vita-model
   attributes:
@@ -60,13 +76,38 @@ body:
     description: What did you do right before it happened? If it only happened once, list what you remember. 再現手順。繰り返し起きるかどうかも教えてください。
     placeholder: '1. Opened PSVITAMAN
 
-      2. Opened All Songs
+      2. Opened ...
 
       3. Selected ...
 
       4. Pressed ...
 
       '
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: '### If this is a Jellyfin / Network problem
+
+
+      Please check the same server and affected track in another Jellyfin client when possible.
+
+
+      In the field below, tell us whether the problem is connection / Quick Connect, browsing, playback start, interruptions, seeking, artwork, or track advance. Also include whether it affects one track or all tracks you tried, FLAC or MP3, the sample rate / bit depth shown by PSVITAMAN, whether `JELLYFIN` appears in Now Playing, and your Jellyfin server version if known.
+
+
+      Describe the local network only in general terms. Never paste passwords, access tokens, Quick Connect secrets, or credential-bearing URLs.
+
+
+      Jellyfin に関する問題の場合、可能であれば別の Jellyfin クライアントでも同じサーバー／曲を確認してください。パスワード、アクセストークン、Quick Connect の秘密情報は投稿しないでください。
+
+      '
+- type: textarea
+  id: jellyfin-details
+  attributes:
+    label: Jellyfin / Network details
+    description: Leave blank if this is not a Jellyfin report. / Jellyfin に関係しない場合は空欄で構いません。
+    placeholder: 'Example: Playback interruption. Same track works on another client. FLAC 192 kHz / 24 bit. JELLYFIN is visible. Happens on every remote track. Jellyfin server version: ...'
   validations:
     required: false
 - type: markdown
@@ -79,7 +120,7 @@ body:
       is rotated to `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.previous.log` on the next launch.
 
 
-      Check the log before uploading it. Issues are public; logs can contain song names, file names, and paths.
+      Check the log before uploading it. Issues are public; logs can contain song names, file names, paths, and server/network details.
 
       '
 - type: upload
@@ -103,5 +144,5 @@ body:
   attributes:
     label: Before submitting / 送信前の確認
     options:
-    - label: I checked attachments for private information and did not upload music. / 添付ファイルに個人情報や音楽ファイルが含まれていないことを確認しました。
+    - label: I checked attachments for private information and did not upload music, passwords, Jellyfin tokens, or Quick Connect secrets. / 添付ファイルに個人情報、音楽ファイル、パスワード、Jellyfin トークン、Quick Connect の秘密情報が含まれていないことを確認しました。
       required: true
