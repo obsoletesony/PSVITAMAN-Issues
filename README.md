@@ -16,19 +16,35 @@ One form for all reports. English and Japanese are welcome. Tell us your setup, 
 
 A free GitHub account is required. [View existing reports](https://github.com/obsoletesony/PSVITAMAN-Issues/issues).
 
+## Jellyfin / Network reports
+
+Before reporting a Jellyfin problem, please check the same server and affected track from another Jellyfin client when possible. This helps separate a server/library problem from a PSVITAMAN problem.
+
+For a Jellyfin report, tell us:
+
+- whether the problem is connection / Quick Connect, library browsing, playback start, playback interruptions, seeking, artwork, or track advance;
+- whether the same track plays from another Jellyfin client;
+- whether the problem affects one track or every track you tried;
+- FLAC or MP3, plus the sample rate and bit depth shown by PSVITAMAN;
+- whether `JELLYFIN` appears on the Now Playing format line;
+- your Jellyfin server version if you know it;
+- a short description of the local network setup. Do not include passwords, access tokens, Quick Connect secrets, or credential-bearing URLs.
+
+PSVITAMAN streams supported FLAC and MP3 through its normal playback path. A track appearing in Jellyfin does not automatically mean its codec is supported by PSVITAMAN.
+
 ## Diagnostic log
 
 The Public Alpha writes a local diagnostic log to your Vita storage. Nothing is uploaded automatically.
 
 Copy `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.log` before launching PSVITAMAN again. A clean START shutdown also exports `ux0:/PSVITAMAN-HW-DIAG.log`; after a crash, that root copy may be stale. The previous session is rotated to `ux0:/data/PSVITAMAN/PSVITAMAN-HW-DIAG.previous.log` on the next launch.
 
-Attach it when you can. It is especially useful for crashes, playback problems, and hardware-specific bugs. No log? Submit the report anyway.
+Attach it when you can. It is especially useful for crashes, playback problems, network streaming problems, and hardware-specific bugs. No log? Submit the report anyway.
 
 ## Before uploading anything
 
-GitHub issues and attachments in this repo are public. Check the log before uploading it; it can contain song names, file names, and paths.
+GitHub issues and attachments in this repo are public. Check the log before uploading it; it can contain song names, file names, paths, and network/server details.
 
-Do not upload music files, a full Vita storage dump, passwords, account details, or anything else you do not want public.
+Do not upload music files, a full Vita storage dump, passwords, Jellyfin access tokens, Quick Connect secrets, account details, private URLs containing credentials, or anything else you do not want public.
 
 For a file-specific bug, keep the affected file unchanged. Converting it or replacing its metadata or cover can make the problem disappear.
 
@@ -42,5 +58,3 @@ Public reports remain in this tracker. Confirmed engineering work may also be tr
 - [Open reports](https://github.com/obsoletesony/PSVITAMAN-Issues/issues)
 
 PSVITAMAN is an independent ObsoleteSony project and is not affiliated with or endorsed by Sony.
-
-
