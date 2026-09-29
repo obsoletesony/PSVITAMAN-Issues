@@ -1,5 +1,7 @@
 # PSVITAMAN Issue Tracker
 
+Reports should concern real PS Vita or PS TV hardware. Emulator issues are outside the scope of this tracker.
+
 Bug reports, compatibility tests, help, and feature ideas for **PSVITAMAN**.
 
 PSVITAMAN's source is private for now. Use this repo for public reports and testing feedback.

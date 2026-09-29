@@ -67,7 +67,6 @@ function classifyModel(body) {
     ["model: PCH-1000", /PCH-1000/i],
     ["model: PCH-2000", /PCH-2000/i],
     ["model: PS TV", /PS TV|Vita TV/i],
-    ["model: emulator", /Vita3K|another emulator|その他のエミュレーター/i],
   ];
 
   const match = rules.find(([, pattern]) => pattern.test(value));

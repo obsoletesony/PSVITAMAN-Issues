@@ -8,6 +8,9 @@ labels:
 body:
 - type: markdown
   attributes:
+    value: このトラッカーは PS Vita / PS TV 実機での報告専用です。エミュレーターでの問題は対象外です。
+- type: markdown
+  attributes:
     value: 'PSVITAMAN のテストありがとうございます。
 
 
@@ -26,7 +29,6 @@ body:
     - PS Vita PCH-1000 (OLED)
     - PS Vita PCH-2000 (Slim)
     - PS TV / Vita TV
-    - Vita3K
     - 分かりません
   validations:
     required: true

@@ -1,5 +1,7 @@
 # Reporting PSVITAMAN issues
 
+Reports should concern real PS Vita or PS TV hardware. Emulator issues are outside the scope of this tracker.
+
 This repo is for PSVITAMAN bugs, compatibility tests, help, and feature ideas. The application source is kept separately and is private for now.
 
 Use the [issue forms](https://github.com/obsoletesony/PSVITAMAN-Issues/issues/new/choose). If you do not know a technical detail, write **“I don't know.”**
