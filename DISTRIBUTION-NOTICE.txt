@@ -6,7 +6,7 @@ Please do not redistribute, mirror, repackage, or submit PSVITAMAN binaries
 to third-party app stores, homebrew repositories, download services, or
 other software catalogs.
 
-Linking to the official PSVITAMAN download page is welcome:
+Official download page:
 https://www.obsoletesony.com/psvitaman/
 
 This policy helps ensure that users receive the current, tested release
