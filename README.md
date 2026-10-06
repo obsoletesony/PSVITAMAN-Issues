@@ -50,6 +50,12 @@ For a file-specific bug, keep the affected file unchanged. Converting it or repl
 
 Public reports remain in this tracker. Confirmed engineering work may also be tracked internally, but the public issue will be updated with its status and any available workaround.
 
+## Distribution
+
+PSVITAMAN is officially distributed exclusively by ObsoleteSony. Please do not redistribute, mirror, repackage, or submit PSVITAMAN binaries to third-party app stores, homebrew repositories, download services, or other software catalogs. Linking to the official download page is welcome.
+
+[Distribution notice](DISTRIBUTION-NOTICE.txt). This policy applies to PSVITAMAN-owned material. Third-party components retain their respective license terms and rights.
+
 ## Links
 
 - [PSVITAMAN](https://www.obsoletesony.com/psvitaman)

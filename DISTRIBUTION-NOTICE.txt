@@ -1,0 +1,20 @@
+PSVITAMAN Distribution Notice
+
+PSVITAMAN is officially distributed exclusively by ObsoleteSony.
+
+Please do not redistribute, mirror, repackage, or submit PSVITAMAN binaries
+to third-party app stores, homebrew repositories, download services, or
+other software catalogs.
+
+Linking to the official PSVITAMAN download page is welcome:
+https://www.obsoletesony.com/psvitaman/
+
+This policy helps ensure that users receive the current, tested release
+directly from its official source.
+
+This notice applies to PSVITAMAN-owned code, artwork, and release packages.
+Third-party components retain their respective license terms and rights;
+this notice does not restrict rights granted by those licenses. See
+THIRD_PARTY_NOTICES.md and the included third-party license files.
+
+Copyright 2026 ObsoleteSony.
