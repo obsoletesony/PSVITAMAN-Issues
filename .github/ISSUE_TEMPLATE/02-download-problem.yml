@@ -1,0 +1,47 @@
+name: Download problem / ダウンロードの問題
+description: A blocked or failed download, before installation. / ダウンロード時の警告やエラー。
+title: "[Download] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what the browser or security software showed. English or Japanese is welcome. Keep browser and antivirus protection enabled. Console model, firmware and diagnostic logs are not needed.
+        
+        ブラウザーやセキュリティソフトに表示された内容を、英語または日本語で教えてください。保護機能は有効のままにしてください。本体の機種、CFW、診断ログは不要です。
+        
+        Reports are public. Crop screenshots to remove personal information. / 報告は公開されます。スクリーンショットから個人情報を取り除いてください。
+  - type: textarea
+    id: warning
+    attributes:
+      label: Warning or error / 警告・エラー
+      description: Paste the exact message or attach a screenshot here. Include a detection name if shown. / 警告の全文、またはスクリーンショットを添付してください。検出名が表示された場合は、その名前も記入してください。
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / ブラウザー
+      placeholder: Chrome, Edge, Firefox, Safari...
+    validations:
+      required: false
+  - type: input
+    id: computer
+    attributes:
+      label: Computer or phone / パソコン・スマートフォン
+      placeholder: Windows 11, macOS, Android, iPhone...
+    validations:
+      required: false
+  - type: input
+    id: download
+    attributes:
+      label: Download link or file name / ダウンロードURL・ファイル名
+      placeholder: PSVITAMAN ZIP URL or file name
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else / 補足
+      description: When did it happen? If Windows Security recorded a detection, include its name or a cropped screenshot from Protection history. Do not disable protection or retry a blocked file for this report. / 発生日時など。Windows セキュリティの「保護の履歴」に記録があれば、検出名または必要な部分だけを切り取ったスクリーンショットを添付してください。報告のために保護機能を無効にしたり、ブロックされたファイルのダウンロードをやり直したりする必要はありません。
+    validations:
+      required: false
